@@ -1,0 +1,14 @@
+body {
+    margin: 15%;
+    margin-left: 25%;
+    background-color: lightblue;
+}
+.container {
+    box-sizing: border-box;
+    border: 10px solid white;
+    padding: 20px;
+}
+.text h1{
+    text-align: justify;
+    align-items: center;
+}
