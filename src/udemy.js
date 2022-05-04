@@ -40,3 +40,35 @@ else{
 var a=5;
 var b=5;
 sum(a,b);*/
+
+// function fact(n){
+//     if (n==1)
+//   {
+//     return 1;
+//   }
+//   else 
+//   {
+//     return fact(n-1)*n;
+//   }
+// }
+// console.log(fact(5));
+// function  sayhello()
+// {
+//   console.log("hello");
+// }
+// function  saybye()
+// {
+//   console.log("bye");
+// }
+// sayhello();
+// setTimeout(saybye,1000)
+function sayhello()
+{
+  console.log('hey sowmi,you are doing great');
+}
+let myInterval=setInterval(sayhello,1000);
+function stopInterval()
+{
+  clearInterval(myInterval);
+}
+setTimeout(stopInterval,2000);

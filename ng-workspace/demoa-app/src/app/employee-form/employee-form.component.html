@@ -1,0 +1,63 @@
+<div class="panel-heading">Employee form</div>
+<div class="panel-body">
+    <form [formGroup]="employeeFormGroup">
+        <div class="form-froup">
+            <label for="fname">First Name:</label>
+            <input id="fname" class="form-control" formControlName="firstName">
+        </div>
+
+        <div class="form-group">
+            <label for="lname">Last Name:</label>
+            <input id="lname" class="form-control" formControlName="lastName">
+        </div>
+
+        <div formGroupName="emailGroup">
+            <div class="form-group">
+
+                <!-- <div class="form-group" ></div>[class.has-error]="employeeFormGroup.get('emailGroup.email').invalid &&
+        employeeFormGroup.get(emailGroup.email).touched"> -->
+                <label for="email"> EMAIL:</label>
+                <input id="email" class="form-control" formControlName="email" placeholder=" email(required)" />
+
+            </div>
+
+            <div class="form-group">
+
+                <!-- <div class="form-group"></div> [class.has-error]="employeeFormGroup.get('emailGroup.confirmEmail').invalid &&
+      employeeFormGroup.get(emailGroup.confirmEmail).touched"> -->
+                <label for="confirmEmail"> Confirm EMAIL:</label>
+                <input id="confirmEmail" class="form-control" formControlName="confirmEmail"
+                    placeholder=" confirm Email(required)" />
+
+            </div>
+        </div>
+
+
+        <!-- <div *ngIf="employeeFormGroup.get('emailGroup').errors?.match">
+      Email doesnt match
+    </div> -->
+        <div class="form-group">
+            <label for="Mobile"> Mobile:</label>
+            <input id="mobile" class="form-control" formControlName="mobile" placeholder="enter your mobile number" />
+        </div>
+
+        <div class="form-group">
+            <label for="notification"> Send notification:</label>
+            <input id="notification" type="radio" formControlName="sendNotification" value="email" /> &nbsp;
+            Email
+            <input id="notification" type="radio" formControlName="sendNotification" value="sms" />
+            &nbsp;SMS
+
+        </div>
+
+        <div class="form-group">
+            <label for="range">Range:</label>
+            <input id="range" class="form-control" formControlName="range" />
+        </div>
+
+
+        <hr />
+        <button class="btn btn-primary" [disabled]="!employeeFormGroup.valid">Submit</button>
+
+    </form>
+</div>
